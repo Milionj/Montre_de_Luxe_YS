@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family:Arial, sans-serif;
+}
+
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+        display: inline-flex;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: bold;
+        justify-content: space-evenly;
+    }
+
+  
+
+
+
+body {
+    background-image: url(/img/Cartier-LamontrePanthrelaHauteHorlogerieaufminin-LUXE.TV-ezgif.com-video-to-gif-converter.gif);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
