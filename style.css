@@ -5,35 +5,45 @@
 }
 
 body {
-font-family:Arial, sans-serif;
+    background-image: url(/img/Cartier-LamontrePanthrelaHauteHorlogerieaufminin-LUXE.TV-ezgif.com-video-to-gif-converter.gif);
+    background-size: cover;
+    font-family:Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header{
-    background-color: #333;
+    background-color: #0d0000;
     color: #fff;
-    padding: 20px;
+    padding: 48px 20px;
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     align-items: center;
 }
 
-nav ul li {
-        display: inline-flex;
-        text-transform: uppercase;
-        cursor: pointer;
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 30px;
-        font-weight: bold;
-        justify-content: space-evenly;
+nav ul {
+        display: flex;
+        gap: 20PX;
+        list-style: none;
     }
 
-  
+nav ul li {
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 60px;
+      font-family: 'helvetica Neue';
+    }
+    
+nav ul li a {
+    color: #000000;
+    background-color: rgb(12, 148, 58);
+    padding: 20px;
+    border-radius: 50px;
+    }
 
-
-
-body {
-    background-image: url(/img/Cartier-LamontrePanthrelaHauteHorlogerieaufminin-LUXE.TV-ezgif.com-video-to-gif-converter.gif);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-}
+    .hero{
+        background-color: rgb(12, 148, 58);
+        padding: 20px 0px 10px;
+    }
