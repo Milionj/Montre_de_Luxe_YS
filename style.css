@@ -4,46 +4,165 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
     background-image: url(/img/Cartier-LamontrePanthrelaHauteHorlogerieaufminin-LUXE.TV-ezgif.com-video-to-gif-converter.gif);
     background-size: cover;
-    font-family:Arial, sans-serif;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #0d0000;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
     justify-content: center;
 }
 
-header{
-    background-color: #0d0000;
-    color: #fff;
-    padding: 48px 20px;
+
+nav ul {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    gap: 25px;
+    list-style: none;
     align-items: center;
 }
 
-nav ul {
-        display: flex;
-        gap: 20PX;
-        list-style: none;
-    }
-
 nav ul li {
-      text-transform: uppercase;
-      cursor: pointer;
-      font-size: 60px;
-      font-family: 'helvetica Neue';
-    }
-    
-nav ul li a {
-    color: #000000;
-    background-color: rgb(12, 148, 58);
-    padding: 20px;
-    border-radius: 50px;
-    }
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue';
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
-    .hero{
-        background-color: rgb(12, 148, 58);
-        padding: 20px 0px 10px;
-    }
+nav ul li a {
+    color: white;
+    background-color: rgb(12, 148, 58);
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn{
+    color:  rgb(5, 120, 45);
+    font-family: 'Helvetica Neue';
+    font-size: 50px;
+
+}
+
+nav ul li a:hover {
+    background-color: rgb(5, 120, 45);
+    transform: scale(1.1);
+}
+
+
+nav ul p {
+    color: white;
+    font-size: 50px;
+    background-color: rgb(12, 148, 58);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-family: 'Helvetica Neue';
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+nav ul p:hover {
+    background-color: rgb(5, 120, 45);
+    transform: rotate(10deg) scale(1.1);
+}
+
+.phrase {
+    padding: 40px;
+    width: auto;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Helvetica Neue';
+}
+
+.page-body {
+    flex-grow: 1;
+    
+}
+
+.page-footer {
+    background-color: #222; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.page-footer p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue';
+    display: flex;
+
+}
+
+.conditions{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.faq{
+justify-content: center;
+}
+
+.info{
+    justify-content: center;
+}
+
+.page-footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.page-footer li {
+    list-style: none;
+}
+
+.page-footer li a {
+    color: rgb(46, 171, 4);
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.page-footer li a:hover {
+    color: #32CD32; 
+    transform: scale(1.2);
+}
+
