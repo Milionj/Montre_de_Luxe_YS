@@ -187,9 +187,7 @@ justify-content: center;
 
 
 .image-wrapper {
-    position: relative;
-    flex: 1;
-    height: 100%;
+    position: relative;       
     width: 100%;
     overflow: hidden;
 }
@@ -198,8 +196,7 @@ justify-content: center;
 .image-wrapper img {
     width: 100%;
     min-height: 100%;
-    object-fit:fill;
-    
+     
 }
 
 
@@ -228,19 +225,20 @@ justify-content: center;
 .image-wrapper .overlay h2 {
     position: absolute;
     top: 10%;
-    font-size: 64px;
-    margin-bottom: 10px;
-
-    
+    font-size: 4vw;
+    margin-bottom: 10px;    
     font-weight: bold;
     font-style: italic;	
     font-family: "Arial",sans-serif;	
     color :white;
 }
 
+
+
+
 .image-wrapper .overlay p {
     position: absolute;
-    font-size: 40px;
+    font-size: 2vw;
 
     width: 80%;
     font-style: italic;
