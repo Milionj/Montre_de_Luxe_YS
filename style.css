@@ -7,14 +7,16 @@
 }
 
 html, body {
-    height: 100%;
+    /*height: 100%;*/
     margin: 0;
     padding: 0;
+    width: 100%;
+    /*
     font-family: Arial, sans-serif;
     background-image: url(/img/Cartier-LamontrePanthrelaHauteHorlogerieaufminin-LUXE.TV-ezgif.com-video-to-gif-converter.gif);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 
 
@@ -26,6 +28,9 @@ html, body {
 
 
 header {
+    position: fixed;
+    z-index: 99;
+    
     background-color: #0d0000;
     color: #fff;
     padding: 20px 40px;
@@ -107,7 +112,8 @@ nav ul p:hover {
 }
 
 .page-body {
-    flex-grow: 1;
+    /*flex-grow: 1;*/
+    margin-top: 100px;
     
 }
 
@@ -176,23 +182,23 @@ justify-content: center;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    width: 100vw; 
-    height: auto;
+    width: 100%;    
 }
 
 
 .image-wrapper {
     position: relative;
-    width: 100%;
+    flex: 1;
     height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
 
 .image-wrapper img {
     width: 100%;
-    height: 100%;
     min-height: 100%;
+    object-fit:fill;
     
 }
 
@@ -211,29 +217,34 @@ justify-content: center;
     text-align: center;    
 }
 .image-wrapper:nth-child(odd) .overlay {
-    left: 0; 
+    right: 0; 
 }
 
 .image-wrapper:nth-child(even) .overlay {
-    right: 0; 
+    left: 0; 
 }
 
 
 .image-wrapper .overlay h2 {
-    font-size: 24px;
+    position: absolute;
+    top: 10%;
+    font-size: 64px;
     margin-bottom: 10px;
 
-
+    
     font-weight: bold;
     font-style: italic;	
-    font-family: "Arsenal SC",sans-serif;	
+    font-family: "Arial",sans-serif;	
     color :white;
 }
 
 .image-wrapper .overlay p {
-    font-size: 16px;
+    position: absolute;
+    font-size: 40px;
+
+    width: 80%;
     font-style: italic;
-	text-align: center;
-    font-family: "Inter",sans-serif;	
+	text-align: start;
+    font-family: "Arial",sans-serif;	
     color :white;
 }
