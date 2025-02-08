@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+/*  Wrapper conteneur global utilisé pour structurer et organiser le contenu*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*  Navbar */
+header {
+    background-color: #0d0000;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+    font-size: 25px;
+}
+
+nav ul li a {
+    color: white;
+    background-color: rgb(12, 148, 58);
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: rgb(5, 120, 45);
+    transform: scale(1.05);
+}
+
+/* YS */
+.brand {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(12, 148, 58);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.brand:hover {
+    background-color: rgb(5, 120, 45);
+    transform: rotate(10deg) scale(1.1);
+}
+/*Footer */
+.page-footer {
+    background-color: #222; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.page-footer p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue';
+}
+
+.conditions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.faq, .info {
+    text-align: center;
+    width: 100%;
+}
+
+.page-footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.page-footer li {
+    list-style: none;
+}
+
+.page-footer li a {
+    color: rgb(46, 171, 4);
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.page-footer li a:hover {
+    color: #32CD32;
+    transform: scale(1.2);
+}
+
+
+
