@@ -10,7 +10,7 @@ html, body {
     color: white;
 }
 
-/* 📌 Wrapper conteneur global utilisé pour structurer et organiser le contenu*/
+/* Wrapper conteneur global utilisé pour structurer et organiser le contenu*/
 .wrapper {
     display: flex;
     flex-direction: column;
