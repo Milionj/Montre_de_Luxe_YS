@@ -2,26 +2,33 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <script src="contact.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Page_nous_contactez_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="Page_nous_contactez_script.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' unsafe-inline;
+         style-src 'self'
+         ; img-src 'self' data:;"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
+        <link rel="stylesheet" href="contact.css">  
+        
         
     </head>
     
     <body>
+        
 
         <div class="wrapper"> 
 
             <header>
                 <nav>
                     <ul>
-                        <li><a href="#home"><i class="fas fa-home custom-home-icon"></i> Accueil</a></li>
+                        <li><a href="acceuil.html"><i class="fas fa-home"></i> Accueil</a></li>
                         <li><a href="#collection"><i class="fa-solid fa-clock"></i> Collection</a></li>
-                        <p>YS</p>
-                        <li><a href="#about"><i class="fas fa-info-circle"></i> À propos</a></li>
+                        <p class="brand">YS</p>
+                        <li><a href="#about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
                         <li><a href="#services"><i class="fas fa-wrench"></i> Services</a></li>
-                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="#contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="panier.html"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+    
                     </ul>
                 </nav>
             </header>
@@ -39,7 +46,7 @@
                                 
                                 <div class="text-infomation">
                                     <h3>TELEPHONE</h3>
-                                    <p>01 02 03 04 05</p>
+                                    <p>01 76 36 21 78</p>
                                 </div>    
                             </div>
                             <div class="our-infomation">
@@ -53,8 +60,8 @@
                                 <img src="img/broche-de-localisation.png" alt="logo location">
                                 <div class="text-infomation">
                                     <h3>SIEGE</h3>
+                                    <a href="http://maps.google.com/?q=1200 14 Rue de la Beaune, 93100 Montreuil" target="_blank" rel="noopener noreferrer">	14 Rue de la Beaune, 93100 Montreuil</a>
                                     
-                                    <p>Rue du marchand,Paris 75001 <a href="http://maps.google.com/?q=1200 Rue du marchand,Paris 75001" target="_blank" rel="noopener noreferrer">	➚</a></p>
                                 </div>    
                             </div>                       
                         </div> 
@@ -74,7 +81,10 @@
                                 <textarea placeholder="Votre message" name="message" rows="4"id="message"></textarea>
                             </div>                            
                         </div> 
-                        <button type="button" onclick="showValidation()" class="validate-button">Valider</button>
+                        
+                        <button type="button" class="validate-button">Valider</button>
+                        
+                        
                     </div> 
 
                  </div>  

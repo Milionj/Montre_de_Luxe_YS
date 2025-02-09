@@ -1,6 +1,9 @@
 
 
 
+document.addEventListener('DOMContentLoaded', function() {  
+    document.querySelector(".validate-button").addEventListener("click", showValidation);
+});
 
 
 function showValidation() {
