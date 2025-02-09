@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+/*Wrapper conteneur global utilisé pour structurer et organiser le contenu*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*  Navbar */
+header {
+    background-color: #0d0000;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+    font-size: 25px;
+}
+
+nav ul li a {
+    color: white;
+    background-color: rgb(12, 148, 58);
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: rgb(5, 120, 45);
+    transform: scale(1.05);
+}
+
+/* YS */
+.brand {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background-color: rgb(12, 148, 58);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.brand:hover {
+    background-color: rgb(5, 120, 45);
+    transform: rotate(10deg) scale(1.1);
+}
+
+/*  Bannière */
+.hero {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('/img/Cartier-LamontrePanthrelaHauteHorlogerieaufminin-LUXE.TV-ezgif.com-video-to-gif-converter.gif');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.hero p {
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.btn {
+    color: white;
+    background-color: rgb(5, 120, 45);
+    padding: 12px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(12, 148, 58);
+}
+
+/*  Section a Propos */
+.apropos-ys {
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.apropos-ys h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.apropos-ys p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/*  Section top Sélection */
+.top-selection {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* les montres */
+.nos-montres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+    /* auto-fit : Ajuste automatiquement le nombre de colonnes.
+    minmax(500px, 1fr) : S’assure que chaque montre reste très grande. */
+    gap: 50px;
+    justify-content: center;
+    padding: 50px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+/* Montre1*/
+.montre1{
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.montre1 h2{
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.montre1 p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight:bolder;
+}
+
+.btn-achat {
+    display: inline-block;
+    font-weight: lighter;
+    padding: 10px 20px;
+    background-color: rgba(247, 247, 247, 0.946);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-achat:hover {
+    background-color: rgb(12, 148, 58);
+}
+
+/*  Design des montres */
+.montres {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+.montres:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3);
+}
+
+.montres img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.montres img:hover {
+    transform: scale(1.1);
+}
+
+.montres h2 {
+    font-size: 32px;
+    margin-top: 20px;
+    color: white;
+}
+
+.montres .description {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #ddd;
+}
+
+.montres .price {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(12, 148, 58);
+}
+
+.montres i {
+    font-size: 40px;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.montres i:hover {
+    transform: scale(1.5);
+    color: #32CD32;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    .nos-montres {
+        grid-template-columns: 1fr;
+    }
+
+    .montres {
+        max-width: 90%;
+    }
+}
+
+/* Notifications*/
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.notification {
+    background: rgba(12, 148, 58, 0.9); 
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 3s;
+}
+
+.notification i {
+    font-size: 22px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+/*Footer*/
+.page-footer {
+    background-color: #222; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.page-footer p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue';
+}
+
+.conditions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.faq, .info {
+    text-align: center;
+    width: 100%;
+}
+
+.page-footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.page-footer li {
+    list-style: none;
+}
+
+.page-footer li a {
+    color: rgb(46, 171, 4);
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.page-footer li a:hover {
+    color: #32CD32;
+    transform: scale(1.2);
+}
+
+
+
