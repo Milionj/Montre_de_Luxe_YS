@@ -157,7 +157,7 @@ nav ul li a:hover {
     margin: auto;
 }
 
-/* Montre top */
+/* Montre1*/
 .montre1{
     max-width: 1600px;
     display: flex;
@@ -191,7 +191,7 @@ nav ul li a:hover {
     background-color: rgb(12, 148, 58);
 }
 
-/*  Design des autres montres */
+/*  Design des montres */
 .montres {
     background: rgba(0, 0, 0, 0.85);
     padding: 50px;
@@ -260,7 +260,52 @@ nav ul li a:hover {
     }
 }
 
-/*Footer */
+/* Notifications*/
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.notification {
+    background: rgba(12, 148, 58, 0.9); 
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 3s;
+}
+
+.notification i {
+    font-size: 22px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+/*Footer*/
 .page-footer {
     background-color: #222; 
     color: white;

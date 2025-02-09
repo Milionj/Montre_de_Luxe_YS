@@ -4,20 +4,22 @@
     box-sizing: border-box;
 }
 
+/* Fond, texte global */
 html, body {
     height: 100%;
     background-color: black;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
-/*  Wrapper conteneur global utilisé pour structurer et organiser le contenu*/
+/* Wrapper pour contenir en bien */
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/*  Navbar */
+/* NAV */
 header {
     background-color: #0d0000;
     padding: 20px 40px;
@@ -45,12 +47,12 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, .active {
     background-color: rgb(5, 120, 45);
     transform: scale(1.05);
 }
 
-/* YS */
+/* Logo YS */
 .brand {
     font-size: 40px;
     font-weight: bold;
@@ -69,7 +71,159 @@ nav ul li a:hover {
     background-color: rgb(5, 120, 45);
     transform: rotate(10deg) scale(1.1);
 }
-/*Footer */
+
+/* PANIER */
+.panier-container {
+    padding: 60px;
+    text-align: center;
+}
+
+.panier-container h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.panier-produits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.panier-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    font-size: 26px;
+}
+
+.panier-item img {
+    width: 120px; 
+    height: 120px;
+    border-radius: 10px;
+}
+
+.panier-item .details h2 {
+    font-size: 30px;
+}
+
+.panier-item .prix {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/*btn*/
+.btn-quantite {
+    background: rgb(12, 148, 58);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 22px; 
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.btn-quantite:hover {
+    background: rgb(5, 120, 45);
+}
+
+/* Supprimer */
+.btn-supprimer {
+    background: red;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-supprimer:hover {
+    background: darkred;
+}
+
+/* TOTAL */
+.panier-resume {
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btn-commander, .btn-vider {
+    background-color: rgb(12, 148, 58);
+    color: white;
+    padding: 20px 40px;
+    font-size: 28px; 
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.btn-commander:hover {
+    background-color: rgb(5, 120, 45);
+}
+
+.btn-vider {
+    background-color: red;
+}
+
+.btn-vider:hover {
+    background-color: darkred;
+}
+
+/*Notifications */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.notification {
+    background: rgba(12, 148, 58, 0.9); 
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards, fadeOut 0.5s forwards 3s;
+}
+
+.notification i {
+    font-size: 22px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+/* FOOTER */
 .page-footer {
     background-color: #222; 
     color: white;
@@ -120,5 +274,20 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .panier-item {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 
+    .panier-item .details {
+        text-align: center;
+        margin-left: 0;
+    }
 
+    .panier-item img {
+        margin-bottom: 10px;
+    }
+}

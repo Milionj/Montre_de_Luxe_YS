@@ -5,44 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="panier.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Montre de Luxe YS</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Montre de Luxe YS - Panier</title>
 </head>
 <body>
 
     <div class="wrapper"> 
-
         <header>
             <nav>
                 <ul>
                     <li><a href="acceuil.html"><i class="fas fa-home"></i> Accueil</a></li>
-                    <li><a href="#collection"><i class="fa-solid fa-clock"></i> Collection</a></li>
+                    <li><a href="collection.html"><i class="fa-solid fa-clock"></i> Collection</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                     <p class="brand">YS</p>
-                    <li><a href="#about"><i class="fas fa-info-circle"></i> À propos</a></li>
-                    <li><a href="#services"><i class="fas fa-wrench"></i> Services</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="panier.html"><i class="fas fa-shopping-cart"></i> Panier</a></li>
-
+                    <li><a href="services.html"><i class="fas fa-wrench"></i> Services</a></li>
+                    <li><a href="panier.html" class="active"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
                 </ul>
-            </header>
-                <footer class="page-footer">
-                    <div class="conditions">
-                        <p>Politique de sécurité</p>
-                        <p>Livraisons et retours - Conditions générales</p>
-                        <p>YS contact &#10082;</p>        
-                        <p>&copy; 2025 Montre de Luxe YS. Tous droits réservés.</p>
-                    </div>
-                    <p class="info">Informations clients</p>
-                    <p class="faq">FAQ</p>
-                
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                    </ul>
-                </footer>
-                
-        
+            </nav>
+        </header>
+
+        <main class="panier-container">
+            <h1>Votre Panier</h1>
+
+            <!-- produits  -->
+            <section id="panier-produits">
+                <p>Votre panier est vide.</p>
+            </section>
+
+            <!-- Total  -->
+            <section class="panier-resume">
+                <p>Total : <span id="total-price">0 €</span></p>
+                <button class="btn-commander">Commander</button>
+                <button class="btn-vider">Vider le panier</button>
+            </section>
+        </main>
+
+        <footer class="page-footer">
+            <div class="conditions">
+                <p>Politique de sécurité</p>
+                <p>Livraisons et retours - Conditions générales</p>
+                <p>YS contact &#10082;</p>        
+                <p>&copy; 2025 Montre de Luxe YS. Tous droits réservés.</p>
             </div>
-    </div>                      
-        
+            <p class="info">Informations clients</p>
+            <p class="faq">FAQ</p>
+
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </footer>
+
+    </div> 
+<div class="notification-container"></div>
+<script src="panier.js"></script>
+</body>
+</html>
