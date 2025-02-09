@@ -100,16 +100,7 @@ nav ul p:hover {
     font-family: 'Helvetica Neue';
 }
 
-main{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    
-}
+
 
 
 .page-footer {
@@ -172,6 +163,18 @@ justify-content: center;
 
 
 
+main{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0d0000;
+    
+}
+
 .image-container {
     display: flex;
     flex-direction: column; 
@@ -185,8 +188,14 @@ justify-content: center;
     position: relative;       
     width: 100%;
     overflow: hidden;
+        opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
+.image-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
 
 .image-wrapper img {
     width: 100%;
@@ -240,4 +249,9 @@ justify-content: center;
 	text-align: start;
     font-family: "Arial",sans-serif;	
     color :white;
+
+
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s; 
 }
