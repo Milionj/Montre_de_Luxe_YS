@@ -4,7 +4,7 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     // Récupérer les valeurs des champs
     const cardNumber = document.getElementById('card-number').value;
     const expirationDate = document.getElementById('expiration-date').value;
-    const cvc = document.getElementById('cvc').value;
+    const cvc = document.getElementById('cvv').value;
 
     // Afficher un message de succès (ou d'erreur)
     const messageDiv = document.getElementById('message');
