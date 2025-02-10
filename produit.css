@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'helvetica Neue';
     font-weight: 300;
+    
 }
 .wrapper {
     display: flex;
@@ -102,7 +103,7 @@ nav ul p:hover {
     width: 300px;
     height: auto;
     margin-left: 505px;
-    margin-top: -50px; 
+    margin-top: -10px; 
 }
 .montres-seiko img{
     margin-left: 200;

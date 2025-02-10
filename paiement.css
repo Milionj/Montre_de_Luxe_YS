@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #0f0; /* Vert */
+    border-radius: 10px;
+    background-color: #333; /* Un léger gris pour le fond du formulaire */
+}
+
+h1 {
+    text-align: center;
+    color: #0f0; /* Vert */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0f0; /* Vert */
+    border-radius: 5px;
+    background-color: #222; /* Un léger noir pour le fond des champs */
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f0; /* Vert */
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0c0; /* Un vert plus foncé au survol */
+}
+
+#message {
+    margin-top: 20px;
+    text-align: center;
+}

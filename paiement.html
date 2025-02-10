@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="paiement.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>Page de paiement</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Paiement sécurisé</h1>
+            <form id="payment-form">
+            <div class="form-group">
+            <label for="card-number">
+             Numero de carte
+            </label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+            </div>
+            <div class="form-group">
+            <label for="expiration-date">
+             Date d'expiration
+             </label>
+                <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/AA">
+            </div>
+            <div class="form-group">
+                <label for="cvv">
+                 CVV
+                 </label>
+                <input type="text" id="cvv" name="cvv" placeholder="123">
+            </div>
+            <button type="submit">Payer</button>
+            </form>
+            <div id="message"></div>
+            <src="script.js"></src>
+    </body>
+</html>
