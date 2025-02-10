@@ -14,7 +14,7 @@
 
 
 header {
-    background-color: #0d0000;
+    background-color: #01000d;
     color: #fff;
     padding: 20px 40px;
     display: flex;
@@ -23,7 +23,9 @@ header {
     justify-content: center;
 }
 
-
+body {
+    background-color: #006800;
+}
 nav ul {
     display: flex;
     gap: 25px;
@@ -94,23 +96,26 @@ nav ul p:hover {
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* Style du conteneur du slider */
+/* Style du slider */
 .slider-container {
-    margin: 30px 0;
+    position: relative;
+    width: 700px;
+    margin: auto;
     text-align: center;
 }
-
-.slider-container h2 {
-    margin-bottom: 20px;
+.slider-container img {
+    width: 270px;
+    
 }
 
-/* Style du slider */
+h2 {
+    margin-bottom: 10px;
+}
+
 .slider {
     position: relative;
-    width: 80%;
-    margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px;
+    width: 100%;
 }
 
 .slides {
@@ -118,60 +123,35 @@ nav ul p:hover {
     transition: transform 0.5s ease-in-out;
 }
 
-.slide {
-    min-width: 100%;
-}
-.slide img {
-    width: 20%;
-    height: auto;
+.slides img {
+    width: calc(300px / 3); /* Afficher 3 images à la fois */
+    flex: 0 0 calc(100% / 3);
+    display: block;
+    border-radius: 10px;
 }
 
 /* Boutons de navigation */
-button.prev, button.next {
+.prev, .next {
     position: absolute;
-    top: 50%;
+    top: 40%;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 30px;
     border: none;
-    padding: 10px;
     cursor: pointer;
-    z-index: 1;
-    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
 }
 
-button.prev {
-    left: 10px;
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-button.next {
-    right: 10px;
-}
-
-.hero h1 {
-    margin-top: -500px;
-    margin-left: -870px ;
-    font-style: italic;
-}
-.logo-seiko img{
-    width: 300px;
-    height: auto;
-    margin-left: 505px;
-    margin-top: -10px; 
-}
-.montres-seiko img{
-    margin-left: 200;
-}
-.logo-rolex img{
-    width: 250px;
-    height: auto;
-    margin-left: 530px;
-}
-.logo-audemars img{
-    width: 270px;
-    height: auto;
-    margin-left: 525px;
-}
+/* Style du footer */
 .page-footer {
     background-color: #222; 
     color: white;

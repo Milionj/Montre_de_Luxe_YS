@@ -1,47 +1,39 @@
-// Fonction pour changer l'image dans le slider
-function changeSlide(sliderId, direction) {
-    const slider = document.getElementById(sliderId);
-    const slides = slider.querySelector('.slides');
-    const slideWidth = slider.offsetWidth;
-    const totalSlides = slides.children.length;
-    
-    // Récupérer l'index actuel à partir de la transformation CSS
-    let currentIndex = Math.abs(parseInt(slides.style.transform.replace('translateX(', '')) || 0) / slideWidth;
-    
-    // Calculer le nouvel index en fonction de la direction (next ou prev)
-    if (direction === 'next') {
-        currentIndex++;
-        if (currentIndex >= totalSlides) currentIndex = 0; // Retour au début
-    } else {
-        currentIndex--;
-        if (currentIndex < 0) currentIndex = totalSlides - 1; // Aller à la fin
+document.addEventListener("DOMContentLoaded", () => {
+    const sliders = document.querySelectorAll(".slider");
+
+    sliders.forEach(slider => initSlider(slider));
+});
+
+function initSlider(slider) {
+    const slides = slider.querySelector(".slides");
+    const images = slides.children;
+    const totalSlides = images.length;
+    const visibleSlides = 3; // Nombre d'images visibles
+    let currentIndex = 0;
+
+    // Ajuste la largeur des slides dynamiquement
+    slides.style.display = "flex";
+    slides.style.transition = "transform 0.5s ease-in-out";
+    Array.from(images).forEach(img => img.style.flex = `0 0 ${100 / visibleSlides}%`);
+
+    function updateSlider() {
+        const offset = -(currentIndex * (100 / visibleSlides));
+        slides.style.transform = `translateX(${offset}%)`;
     }
-    
-    // Appliquer la transformation pour afficher la bonne image
-    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+    slider.querySelector(".next").addEventListener("click", () => {
+        currentIndex += visibleSlides;
+        if (currentIndex >= totalSlides) {
+            currentIndex = 0; // Retour au début
+        }
+        updateSlider();
+    });
+
+    slider.querySelector(".prev").addEventListener("click", () => {
+        currentIndex -= visibleSlides;
+        if (currentIndex < 0) {
+            currentIndex = totalSlides - visibleSlides;
+        }
+        updateSlider();
+    });
 }
-
-// Attacher les événements aux boutons
-document.querySelectorAll('.prev').forEach(button => {
-    button.addEventListener('click', function() {
-        const sliderId = button.closest('.slider').id;
-        changeSlide(sliderId, 'prev');
-    });
-});
-
-document.querySelectorAll('.next').forEach(button => {
-    button.addEventListener('click', function() {
-        const sliderId = button.closest('.slider').id;
-        changeSlide(sliderId, 'next');
-    });
-});
-
-// Adapter le slider au redimensionnement de la fenêtre
-window.addEventListener('resize', function() {
-    document.querySelectorAll('.slider .slides').forEach(slides => {
-        const slideWidth = slides.parentElement.offsetWidth;
-        const currentIndex = Math.abs(parseInt(slides.style.transform.replace('translateX(', '')) || 0) / slideWidth;
-        slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    });
-});
-
