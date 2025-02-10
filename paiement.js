@@ -1,16 +1,28 @@
-document.getElementById('payment-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche le rechargement de la page
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("payment-form");
+    const messageDiv = document.getElementById("message");
 
-    // Récupérer les valeurs des champs
-    const cardNumber = document.getElementById('card-number').value;
-    const expirationDate = document.getElementById('expiration-date').value;
-    const cvc = document.getElementById('cvv').value;
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    // Afficher un message de succès (ou d'erreur)
-    const messageDiv = document.getElementById('message');
-    messageDiv.textContent = `Paiement effectué avec succès pour la carte: ${cardNumber}`;
-    messageDiv.style.color = '#0f0'; // Vert pour le message de succès
+        const cardNumber = document.getElementById("card-number").value.trim();
+        const expirationDate = document.getElementById("expiration-date").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
 
-    // Réinitialiser le formulaire
-    document.getElementById('payment-form').reset();
+        if (cardNumber && expirationDate && cvv) {
+            showMessage("✅ Paiement validé avec succès !", "success");
+        } else {
+            showMessage("❌ Veuillez remplir tous les champs.", "error");
+        }
+    });
+
+    function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = type;
+
+        setTimeout(() => {
+            messageDiv.textContent = "";
+            messageDiv.className = "";
+        }, 3000);
+    }
 });
