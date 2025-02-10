@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica Neue';
+    font-weight: 300;
+    
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #0d0000;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+nav ul li {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue';
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a {
+    color: white;
+    background-color: rgb(12, 148, 58);
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn{
+    color:  rgb(5, 120, 45);
+    font-family: 'Helvetica Neue';
+    font-size: 50px;
+
+}
+nav ul li a:hover {
+    background-color: rgb(5, 120, 45);
+    transform: scale(1.1);
+}
+
+
+nav ul p {
+    color: white;
+    font-size: 50px;
+    background-color: rgb(12, 148, 58);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-family: 'Helvetica Neue';
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+nav ul p:hover {
+    background-color: rgb(5, 120, 45);
+    transform: rotate(10deg) scale(1.1);
+}
+
+.hero {
+    background-image: url('image/pexels-mat-brown-150387-1034063 1.png');
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Style du conteneur du slider */
+.slider-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.slider-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Style du slider */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+.slide img {
+    width: 20%;
+    height: auto;
+}
+
+/* Boutons de navigation */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.hero h1 {
+    margin-top: -500px;
+    margin-left: -870px ;
+    font-style: italic;
+}
+.logo-seiko img{
+    width: 300px;
+    height: auto;
+    margin-left: 505px;
+    margin-top: -10px; 
+}
+.montres-seiko img{
+    margin-left: 200;
+}
+.logo-rolex img{
+    width: 250px;
+    height: auto;
+    margin-left: 530px;
+}
+.logo-audemars img{
+    width: 270px;
+    height: auto;
+    margin-left: 525px;
+}
+.page-footer {
+    background-color: #222; 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.page-footer p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue';
+    display: flex;
+
+}
+
+.conditions{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.faq{
+justify-content: center;
+}
+.info{
+    justify-content: center;
+}
+
+.page-footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+.page-footer li {
+    list-style: none;
+}
+
+.page-footer li a {
+    color: rgb(46, 171, 4);
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.page-footer li a:hover {
+    color: #32CD32; 
+    transform: scale(1.2);
+}
