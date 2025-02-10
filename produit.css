@@ -94,6 +94,60 @@ nav ul p:hover {
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+/* Style du conteneur du slider */
+.slider-container {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.slider-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Style du slider */
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+.slide img {
+    width: 20%;
+    height: auto;
+}
+
+/* Boutons de navigation */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
 .hero h1 {
     margin-top: -500px;
     margin-left: -870px ;
