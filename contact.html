@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <script src="contact.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' unsafe-inline;
-         style-src 'self'
-         ; img-src 'self' data:;"> 
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+            script-src 'self';
+            style-src 'self'  https://cdnjs.cloudflare.com ;
+            font-src 'self' https://cdnjs.cloudflare.com;
+            img-src 'self' data:;"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
         <link rel="stylesheet" href="contact.css">  
         
@@ -24,16 +26,16 @@
                         <li><a href="acceuil.html"><i class="fas fa-home"></i> Accueil</a></li>
                         <li><a href="#collection"><i class="fa-solid fa-clock"></i> Collection</a></li>
                         <p class="brand">YS</p>
-                        <li><a href="#about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
                         <li><a href="#services"><i class="fas fa-wrench"></i> Services</a></li>
-                        <li><a href="#contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                         <li><a href="panier.html"><i class="fas fa-shopping-cart"></i> Panier</a></li>
     
                     </ul>
                 </nav>
             </header>
     
-            <div class="main">                 
+            <main>                 
                  <div class="layout">
                     <div class="container"id="container1">
                         <div class="title-container">
@@ -42,8 +44,7 @@
                         </div> 
                         <div class="infomations-container">
                             <div class="our-infomation">
-                                <img src="img/telephone.png" alt="logo télephone">
-                                
+                                <img src="img/telephone.png" alt="logo télephone">                                
                                 <div class="text-infomation">
                                     <h3>TELEPHONE</h3>
                                     <p>01 76 36 21 78</p>
@@ -53,7 +54,7 @@
                                 <img src="img/enveloppe.png" alt="logo mail">
                                 <div class="text-infomation">
                                     <h3>MAIL</h3>
-                                    <p>TempsPrecieux@gmail.com</p>
+                                    <p>MontreYS@gmail.com</p>
                                 </div>    
                             </div>  
                             <div class="our-infomation">
@@ -86,11 +87,8 @@
                         
                         
                     </div> 
-
-                 </div>  
-                   
-            
-                </div> 
+                 </div>    
+            </main>
 
             <footer class="page-footer">
                 <div class="conditions">

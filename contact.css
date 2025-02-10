@@ -141,7 +141,7 @@ nav ul li a:hover {
 
 
 
-.main {
+main {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -149,8 +149,7 @@ nav ul li a:hover {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    
-    
+    background-color: #0d0000;
 }
 
 
@@ -189,6 +188,7 @@ nav ul li a:hover {
     }
     .container {
         width: 100%; 
+        min-height: 60vh;
     }
 }
 
@@ -288,10 +288,16 @@ nav ul li a:hover {
     margin-bottom: 10px;
     resize: none; 
 }
+
+.your-infomation input:focus,
+.your-infomation textarea:focus {
+    animation: focusAnimation 0.3s forwards;     
+}
 .our-infomation a{
     color: #f0f0f0; 
 
 }
+
 
 .container button{ 
     margin: 0 10% ; 
@@ -305,8 +311,22 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     vertical-align: middle;
+    
 }
 .container button:hover {
-    background-color: #2c8f44;  
+    background-color: #2c8f44; 
+    transform: scale(1.05); 
 }
 
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation des champs de formulaire */
+@keyframes focusAnimation {
+    0% { box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+    100% { box-shadow: 0 0 8px rgba(0, 123, 255, 0.8); }
+}
