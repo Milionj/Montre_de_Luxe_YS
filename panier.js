@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         afficherNotification("Commande validée ! Merci pour votre achat 🚀", "fas fa-check-circle");
         viderPanier();
         setTimeout(() => {
-            window.location.href = "acceuil.html"; // Redirige en 2 secondes
+            window.location.href = "index.html"; // Redirige en 2 secondes
         }, 2000);
     }
 
