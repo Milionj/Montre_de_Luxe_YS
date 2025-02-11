@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+            script-src 'self'  https://unpkg.com; 
+            style-src 'self'  https://cdnjs.cloudflare.com https://unpkg.com ;
+            font-src 'self' https://cdnjs.cloudflare.com;
+            img-src 'self'  data:  https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org https://unpkg.com;">
     <link rel="stylesheet" href="panier.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"                
+    integrity="sha384-5e2ESR8Ycmos6g3gAKr1Jvwye8sW4U1u/cAKulfVJnkakCcMqhOudbtPnvJ+nbv7"
+    crossorigin="anonymous"/>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <title>Montre de Luxe YS - Panier</title>
 </head>
@@ -15,11 +22,11 @@
             <nav>
                 <ul>
                     <li><a href="acceuil.html"><i class="fas fa-home"></i> Accueil</a></li>
-                    <li><a href="collection.html"><i class="fa-solid fa-clock"></i> Collection</a></li>
+                    <li><a href="produit.html"><i class="fa-solid fa-clock"></i> Collection</a></li>
                     <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <p class="brand">YS</p>
-                    <li><a href="services.html"><i class="fas fa-wrench"></i> Services</a></li>
-                    <li><a href="panier.html" class="active"><i class="fas fa-shopping-cart"></i> Panier</a></li>
+                    <p class="brand">YS</p>                   
+                    <li><a href="paiement.html"><i class="fas fa-wrench"></i>Paiement</a></li>
+                    <li><a href="panier.html"><i class="fas fa-shopping-cart"></i> Panier</a></li>
                     <li><a href="about.html"><i class="fas fa-info-circle"></i> À propos</a></li>
                 </ul>
             </nav>
@@ -61,6 +68,9 @@
 
     </div> 
 <div class="notification-container"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js" 
+integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" 
+crossorigin="anonymous"></script>
 <script src="panier.js"></script>
 </body>
 </html>
