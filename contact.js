@@ -25,12 +25,12 @@ function showValidation() {
 
 
 
-var map = L.map('map').setView([48.8594, 2.4547], 13); // Coordonées de l'adresse (14 Rue de la Beaune, 93100 Montreuil)
+var map = L.map('map').setView([48.8618309 , 2.4359251], 13); // Coordonées de l'adresse (14 Rue de la Beaune, 93100 Montreuil)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 
-L.marker([48.8594, 2.4547]).addTo(map)
-    .bindPopup('<b>14 Rue de la Beaune, 93100 Montreuil</b>')
+L.marker([48.8618309 , 2.4359251]).addTo(map)
+    .bindPopup('<b>14 Rue de la Beaune, 93100 Montswreuil</b>')
     .openPopup();
