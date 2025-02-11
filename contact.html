@@ -4,7 +4,7 @@
         <meta charset="UTF-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
-            script-src 'self'  https://unpkg.com; 
+            script-src 'self' https://unpkg.com; 
             style-src 'self'  https://cdnjs.cloudflare.com https://unpkg.com ;
             font-src 'self' https://cdnjs.cloudflare.com;
             img-src 'self'  data:  https://a.tile.openstreetmap.org https://b.tile.openstreetmap.org https://c.tile.openstreetmap.org https://unpkg.com;"> 
@@ -74,22 +74,22 @@
                     </div> 
                     
                     <div class="container"id="container2">
-                        <div class="title-container">
-                            <h2>FORMULAIRE</h2>
-                            <p>Voici notre formulaire de contact</p>                    
-                        </div> 
-                        <div class="infomations-container">
-                            <div class="your-infomation">
-                                <input type="text" placeholder="Votre nom"  name="lastname" id="lastname"></input>
-                                <input type="text" placeholder="Votre prénom"  name="firstname"id="firstname"></input>
-                                <input type="email" placeholder="Votre email"  name="email"id="email"></input>                                
-                                <textarea placeholder="Votre message" name="message" rows="4"id="message"></textarea>
-                            </div>                            
-                        </div> 
-                        
-                        <button type="button" class="validate-button">Valider</button>
-                        
-                        
+                        <form id="contactForm">
+                            <div class="title-container">
+                                <h2>FORMULAIRE</h2>
+                                <p>Voici notre formulaire de contact</p>                    
+                            </div> 
+                            <div class="infomations-container">
+                                <div class="your-infomation">
+                                    <input type="text" placeholder="Votre nom"  name="lastname" id="lastname"required></input>
+                                    <input type="text" placeholder="Votre prénom"  name="firstname"id="firstname"required></input>
+                                    <input type="email" placeholder="Votre email"  name="email"id="email"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                                    required></input>                                
+                                    <textarea placeholder="Votre message" name="message" rows="4"id="message"required></textarea>
+                                </div>                            
+                            </div>                             
+                            <button type="submit" class="validate-button">Valider</button>                            
+                        </form>
                     </div> 
                  </div>    
             </main>

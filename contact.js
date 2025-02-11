@@ -2,7 +2,10 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {  
-    document.querySelector(".validate-button").addEventListener("click", showValidation);
+    document.querySelector("#contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        showValidation();
+    });
 });
 
 
@@ -13,14 +16,10 @@ function showValidation() {
     let email = document.getElementById("email").value;
     let message = document.getElementById("message").value;
 
-   
-    if (lastname && firstname && email && message) {
-        let confirmMessage = 
-        `Merci ${firstname} ${lastname} !\nVotre demande a été pris en compte.\nDétails :\nEmail : ${email}\nMessage : ${message}`;
-        alert(confirmMessage);  
-    } else {
-        alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
-    }
+    let confirmMessage = 
+    `Merci ${firstname} ${lastname} !\nVotre demande a été pris en compte.\nDétails :\nEmail : ${email}\nMessage : ${message}`;
+    alert(confirmMessage); 
+
 }
 
 
@@ -32,5 +31,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 L.marker([48.8618309 , 2.4359251]).addTo(map)
-    .bindPopup('<b>14 Rue de la Beaune, 93100 Montswreuil</b>')
+    .bindPopup('<b>14 Rue de la Beaune, 93100 Montreuil</b>')
     .openPopup();

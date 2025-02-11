@@ -293,6 +293,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 15px 0;
 }
 .your-infomation input {
     font-family: 'Helvetica Neue';
@@ -328,7 +329,7 @@ main {
 
 
 .container button{ 
-    margin: 0 10% ; 
+    margin: 20px 10% ; 
     background-color: #2ea44f;
     border: 1px solid;
     width: 80%;
