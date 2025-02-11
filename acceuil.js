@@ -1,4 +1,19 @@
-// Fonction pour afficher des notifications
+document.addEventListener("DOMContentLoaded", function() {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+
+    if (!burger || !nav) {
+        console.error("Menu burger ou navigation introuvable.");
+        return;
+    }
+
+    burger.addEventListener("click", function() {
+        nav.classList.toggle("active");
+        burger.classList.toggle("active");
+    });
+});
+
+
 function afficherNotification(message, iconClass = "fas fa-check-circle") {
     const container = document.querySelector(".notification-container");
 

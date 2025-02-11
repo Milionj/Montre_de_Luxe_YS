@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+
+    if (!burger || !nav) {
+        console.error("Menu burger ou navigation introuvable.");
+        return;
+    }
+
+    burger.addEventListener("click", function() {
+        nav.classList.toggle("active");
+        burger.classList.toggle("active");
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const imageWrappers = document.querySelectorAll('.image-wrapper');
     const pElements = document.querySelectorAll('.image-wrapper p'); 
