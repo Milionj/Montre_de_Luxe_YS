@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+
+    if (!burger || !nav) {
+        console.error("Menu burger ou navigation introuvable.");
+        return;
+    }
+
+    burger.addEventListener("click", function() {
+        nav.classList.toggle("active");
+        burger.classList.toggle("active");
+    });
+
     const form = document.getElementById("payment-form");
     const messageDiv = document.getElementById("message");
 
